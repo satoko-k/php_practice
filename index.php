@@ -1,28 +1,38 @@
 <?php
-    // Menuクラスを定義
-    class Item {
-        public $name;
+    // Menuクラスを定義ファイルの読みこみ
+    require_once('itemclass.php');
 
-        // コンストラクタを定義
-        public function __construct($name){
-            // nameプロパティに引数の$nameを代入
-            $this ->name =$name;
-         }
-  
-        // // helloメソッドを定義
-        // public function hello(){
-        //  echo '私は'.$this->name.'です';
-        // }
-
-    }
-    
+    // データ定義ファイルの読みこみ
     // Itemクラスのインスタンス
-        $arrange = new Item("Arrangement");
-        $bouquet = new Item("Bouquet");
+    require_once('data.php');
 
 ?>
-<!-- php1行の時はname;の；は省略可 -->
-<p><?php echo $arrange-> name; ?></p>
-<p><?php echo $bouquet-> name ?></p>
+
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link href='https://fonts.googleapis.com/css?family=Pacifico|Lato' rel='stylesheet' type='text/css'>
+    <title>Document</title>
+</head>
+<body>
+    <div class="menu-wrapper container">
+        <h1 class="logo">flower shop</h1>
+        <div class="menu-items">
+        <!-- 配列$itemsの要素を変数$itemとするforeach文 -->
+        <?php foreach($items as $item): ?>
+        <h3><?php echo $item ->name; ?></h3>
+        <?php endforeach ?>
+        
+        </div>
+    </div>
+    
+</body>
+</html>
+
+
 
 
