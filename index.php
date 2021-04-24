@@ -1,10 +1,12 @@
 <?php
-    // Menuクラスを定義ファイルの読みこみ
-    require_once('itemclass.php');
+    // Itemクラスの定義を移動：itemclass.php　
+    // データ定義(Itemクラスのインスタンス)を移動　data.php
 
-    // データ定義ファイルの読みこみ
-    // Itemクラスのインスタンス
+
+    // データ定義ファイルの読みこみ　Itemクラスのインスタンス
     require_once('data.php');
+
+    
 
 ?>
 
@@ -24,7 +26,9 @@
         <div class="menu-items">
         <!-- 配列$itemsの要素を変数$itemとするforeach文 -->
         <?php foreach($items as $item): ?>
-        <h3><?php echo $item ->name; ?></h3>
+        <img src="./images/<?php echo $item->getImage();  ?>">
+        <h3><?php echo $item ->getName(); ?></h3>
+        <p class="price">￥<?php echo $item->getTaxIncludedPrice();  ?>(税込）</p>
         <?php endforeach ?>
         
         </div>
