@@ -7,6 +7,7 @@ class Item {
     private $name;
     private $price;
     private $image;
+    private $orderCount = 0; //初期値０
 
     // コンストラクタを定義
     public function __construct($name,$price,$image){
@@ -30,6 +31,20 @@ class Item {
     public function getImage(){
         return $this-> image;
     }
+
+    // ゲッターgetOrderCount
+    public function getOrderCount(){
+        return $this-> orderCount;
+    }
+    // セッターsetOrderCountを定義
+    public function setOrderCount($orderCount){
+        $this->orderCount = $orderCount;
+    }
+
+
+
+
+
 
     //価格を税込みにする（getTaxIncludedPriceメソッドを定義 ）
     public function getTaxIncludedPrice(){            

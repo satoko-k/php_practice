@@ -18,5 +18,7 @@ require_once('itemclass.php');
 // 配列に上記インスタンスを順番に入れる
   $items = array($arrange1,$arrange2,$bouquet1,$bouquet2);
 
+// setOrderCountメソッドの確認：引数は３
+  $arrange1 ->setOrderCount(3);
 
 ?>
