@@ -43,13 +43,19 @@ class Item {
 
 
 
-
-
-
     //価格を税込みにする（getTaxIncludedPriceメソッドを定義 ）
     public function getTaxIncludedPrice(){            
         return floor($this->price * 1.1);            
       }
+
+    // getTotalPriceメソッドを定義
+    public function getTotalPrice(){
+        return $this->getTaxIncludedPrice() * $this->orderCount;
+    }
+
+
+
+
 
 }
 
