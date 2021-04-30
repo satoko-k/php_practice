@@ -5,6 +5,7 @@
 
     // データ定義ファイルの読みこみ　Itemクラスのインスタンス
     require_once('data.php');
+    require_once('itemclass.php');
 
     
 
@@ -27,6 +28,7 @@
         <div class="row my-5">
         <h1 class="col-md-8 offset-2">flower shop</h1>
         </div>
+        <h3>商品数 <?php echo Item::getCount(); ?>個</h3>
         
             <form method="post" action="confirm.php">
                 <div class="menu-items row mb-3">

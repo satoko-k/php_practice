@@ -8,6 +8,8 @@ class Item {
     private $price;
     private $image;
     private $orderCount = 0; //初期値０
+    // クラスプロパティ
+    public static $count = 0; //初期値0
 
     // コンストラクタを定義
     public function __construct($name,$price,$image){
@@ -17,6 +19,8 @@ class Item {
         $this ->price=$price;
         // imageプロパティに引数の$imageを代入
         $this ->image=$image;
+        // クラスプロパティ　countに１をたす
+        self::$count++;
      }
 
     // // helloメソッドを定義
@@ -51,6 +55,11 @@ class Item {
     // getTotalPriceメソッドを定義
     public function getTotalPrice(){
         return $this->getTaxIncludedPrice() * $this->orderCount;
+    }
+
+    // getCOunt
+    public static function getCount(){
+        return self :: $count;
     }
 
 
