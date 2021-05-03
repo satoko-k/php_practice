@@ -57,7 +57,7 @@ class Item {
         return $this->getTaxIncludedPrice() * $this->orderCount;
     }
 
-    // getCOunt
+    // getCount
     public static function getCount(){
         return self :: $count;
     }
