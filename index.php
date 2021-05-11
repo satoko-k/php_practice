@@ -38,6 +38,9 @@
                     <div class="menu-item col-md-4 mb-3">
                         <img class="img-fluid rounded" src="./images/<?php echo $item->getImage();  ?>">
                         <h3><?php echo $item ->getName(); ?></h3>
+                        <?php if ($item instanceof Pot): ?>
+                        <p class="menu-item-type mb-1"><?php echo $item->getType() ?><?php echo $item->getSize() ?></p>
+                        <?php endif ?>
                         <p class="price mb-1">￥<?php echo $item->getTaxIncludedPrice();  ?>(税込）</p>
                         <!-- <p>注文数: <?php echo $item->getOrderCount() ?></p> -->
                         <input class="number" type="number" value="0" name="<?php echo $item->getName() ?>"><span>個</span>

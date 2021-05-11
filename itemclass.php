@@ -4,12 +4,12 @@
 // 
 class Item {
     // プロパティの定義 (publicからpribateに変更：クラスの外からアクセスできなくなる)
-    private $name;
-    private $price;
-    private $image;
-    private $orderCount = 0; //初期値０
+    protected $name;
+    protected $price;
+    protected $image;
+    protected $orderCount = 0; //初期値０
     // クラスプロパティ
-    public static $count = 0; //初期値0
+    protected static $count = 0; //初期値0
 
     // コンストラクタを定義
     public function __construct($name,$price,$image){

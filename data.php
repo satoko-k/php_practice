@@ -16,7 +16,7 @@ require_once('arrange.php');
   $bouquet1 = new Item("Bouquet_S",2500,"bouguet01.jpg");
   $bouquet2 = new Item("Bouquet_M",3500,"bouguet02.jpg");
   $bouquet3 = new Item("Bouquet_L",5500,"bouguet03.jpg");
-  $pot1 = new Pot("チューリップの花鉢",2000,"pot01.jpg");
+  $pot1 = new Pot("チューリップの花鉢",2000,"pot01.jpg","プラスチック鉢","6号");
 
 // 配列に上記インスタンスを順番に入れる
   $items = array($arrange1,$arrange2,$arrange3,$bouquet1,$bouquet2,$bouquet3,$pot1);
