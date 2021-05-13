@@ -1,0 +1,29 @@
+/* .menu-items {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.menu-item {
+  margin: 20px 10px;
+} */
+h1,
+h3,
+p {
+  color: #333;
+}
+
+h1 {
+  text-align: center;
+  font-family: "Raleway", sans-serif;
+  font-size: 64px;
+}
+
+.order-amount {
+  float: left;
+}
+.order-price {
+  float: right;
+}
+.number {
+  width: 3em;
+}
